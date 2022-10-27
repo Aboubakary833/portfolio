@@ -4,15 +4,13 @@
 }
 
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #eee;
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -55,24 +53,153 @@ body {
   height: fit-content;
 }
 
-h1, h2, h3, h4, h5, h6 {font-family: "Fredoka", sans-serif;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fredoka", sans-serif;
+}
 
-li {list-style: none;}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-.d-none {display: none;}
-.d-block {display: block;}
-.d-inline {display: inline;}
-.d-inline-block {display: inline-block;}
-.d-flex {display: flex;}
-.justify-start {justify-content: flex-start;}
-.justify-end {justify-content: flex-end;}
-.justify-center {justify-content: center;}
-.justify-between {justify-content: space-between;}
-.items-center {align-items: center;}
+button {
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-flex {
+  display: flex;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
 
 .container {
-  max-width: 100%;
   margin: 0 auto;
+}
+
+header {
+  width: 100vw;
+  padding: 5px auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#collape-btn {display: none;}
+
+#header-nav {margin-right: 15px;}
+
+#header-nav ul li {
+  padding: 0px 5px;
+}
+
+#header-nav ul li a {
+  padding: 10px 8px;
+}
+
+#theme-toggle {
+  width: 68px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 1px 4px;
+  border-radius: 22px;
+  position: relative;
+}
+
+#theme-toggle button {
+  padding: 1px;
+}
+
+#toggle-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 17px;
+  background: #ddd;
+  position: absolute;
+  z-index: -1;
+  top: 1px;
+  left: 2px;
+}
+
+#theme-toggle button:first-of-type {
+  color: #f80;
+}
+#theme-toggle button:last-of-type {
+  color: #8b8b8b;
+}
+
+#sun-svg {
+  width: 24px;
+  height: 24px;
+}
+
+#moon-svg {
+  width: 20px;
+  height: 20px;
+}
+
+body[data-theme="light"] {
+  color: #080808;
+  background-color: rgb(255, 251, 247);
+
+  #theme-toggle {
+    background: rgba($color: #eee, $alpha: 0.5);
+    border: 0.75px solid #eee;
+  }
+}
+
+body[data-theme="dark"] {
+  color: #eee;
+  background-color: #242424;
+
+  #theme-toggle {
+    background: rgba($color: rgb(70, 70, 70), $alpha: 0.5);
+    border: 0.75px solid rgb(61, 61, 61);
+  }
 }
 
 @media (max-width: 1280px) {
@@ -89,41 +216,61 @@ li {list-style: none;}
 
 @media (max-width: 1024px) {
   .container {
-    width: 1200px;
+    width: calc(100% - 10%);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
+  }
+  #menu-svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  #collape-btn {
+    display: block;
   }
 
   #header-nav {
     display: none;
   }
+
+  body[data-theme="light"] {
+    header {border-bottom: .25px solid #eee;}
+  }
+
+  body[data-theme="dark"] {
+    header {border-bottom: .25px solid rgb(61, 61, 61);}
+  }
 }
 
 @media (max-width: 640px) {
   .container {
-    width: 100%;
+    width: calc(100% - 20px);
   }
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #080808;
-    background-color: rgb(255, 251, 247);
+  #logo {
+    width: 44px;
+    height: 47px;
   }
-}
 
-header {
-  width: 100vw;
-  padding: 5px auto;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
+  #theme-toggle {
+    height: 32px;
+  }
 
-#header-nav ul li {
-  padding: 5px 10px;
+  #sun-svg {
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+  }
+
+  #moon-svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+  }
+
+  #toggle-circle {top: 2px;}
 }
