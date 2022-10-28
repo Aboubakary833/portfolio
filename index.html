@@ -11,9 +11,9 @@
     <div id="app">
       <header class="h-fit">
         <div class="container" id="header-container">
-          <div id="collape-btn">
+          <div id="sidebar-show-btn">
             <button class="d-flex justify-center items-center">
-              <svg id="menu-svg" fill="currentColor" viewBox="0 0 16 16">
+              <svg class="menu-svg" fill="currentColor" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
               </svg>
             </button>
@@ -50,6 +50,37 @@
                 </svg>
               </button>
               <div id="toggle-circle"></div>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-sidebar" class="show">
+          <div id="mobile-sidebar-container">
+            <div id="mobile-sidebar-header" class="d-flex justify-end items-center">
+              <div id="sidebar-hide-btn">
+                <button class="d-flex justify-center items-center">
+                  <svg class="menu-svg" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div id="mobile-sidebar-body">
+              <nav id="sidebar-nav">
+                <ul>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact me</a>
+                  </li>
+                  <li>
+                    <a href="#">CV</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
