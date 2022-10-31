@@ -8,7 +8,6 @@
     <title>Aboubakary Cissé</title>
   </head>
   <body data-theme="light">
-    <div id="app">
       <header class="h-fit">
         <div class="container" id="header-container">
           <div id="sidebar-show-btn">
@@ -88,8 +87,11 @@
           </div>
         </div>
       </header>
-      <main class="d-flex justify-content-center">
-        <div class="container">
+      <main">
+        <div id="heading" class="container">
+
+          <!-- START-HERO-SECTION -->
+
           <div id="hero-section">
             <section>
               <h3>Hey 👋🏽️, welcome! I'm</h3>
@@ -119,15 +121,77 @@
                 </a>
               </div>
             </section>
-            <section class="d-flex justify-center items-center">
-              <svg>
-                <polygon points=""/>
+            <section>
+              <svg id="hero-hexagones" viewBox="0 0 210 190" fill="transparent">
+                <g stroke="url(#hexagone-stroke-gradient)">
+                  <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75" transform="rotate(-15)" />
+                  <polygon points="80 41, 150 81, 150 159, 80 199, 10 160, 10 80" transform="rotate(-15)"/>
+                  <polygon id="last-hexagone" points="80 53, 140 87, 140 153, 80 187, 20 154, 20 86" transform="rotate(-15)" fill="url(#avatarPattern)" />
+                </g>
+                <defs>
+                  <linearGradient id="hexagone-stroke-gradient" gradientTransform="rotate(90)">
+                    <stop offset="25%" stop-color="rgba(255, 136, 0, .25)" />
+                    <stop offset="75%" stop-color="#f80" />
+                  </linearGradient>
+                  <pattern id="avatarPattern" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#avatar" transform="translate(-0.12 0.007) scale(0.0014 0.00125)"/>
+                    </pattern>
+                    <image xlink:href="src/avatars/avatarOne.png" width="900" height="900" id="avatar" preserveAspectRatio />
+                </defs>
               </svg>
             </section>
           </div>
+
+          <!-- END-HERO-SECTION -->
+
+          <!-- START-SCROLL-BUTTON -->
+
+          <div id="scroll-btn-container">
+            <a href="javascript:void">
+              <svg width="40" height="40" viewBox="0 0 50 100">
+                <g>
+                  <rect width="40" height="65" x="5" y="5" rx="20" ry="20" fill="transparent" stroke-width="5" stroke="#f80" />
+                  <rect width="20" height="30" x="15" y="15" rx="10" ry="10" fill="#f80">
+                    <animateTransform 
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    from="0 0"
+                    to="0 15"
+                    dur="1s"
+                    repeatCount="indefinite" />
+                  </rect>
+                </g>
+              </svg>
+            </a>
+          </div>
+
+          <!-- END-SCROLL-BUTTON -->
+        </div>
+
+        <div id="about" class="container">
+            <h1 class="title">0. About</h1>
+            <div id="about-me">
+              <h2 class="subtitle">0.0 About me</h2>
+              <div class="content d-flex justify-center">
+                <div class="img-container">
+                  <img src="src/avatars/avatarTwo.png" alt="Aboubakary Cissé">
+                </div>
+                <div class="text">
+                  <p>Hey! I'm Aboubakary Cissé, a junior web developer 
+                    from Burkina Faso. I've begun to be interested to 
+                    coding in 2019 when I was at hight-school. After 
+                    the baccalaureate exams, I should be studying at 
+                    University but due to the late in my department 
+                    I decided to do a bootcamp in Web and web mobile development after which I found a job as 
+                    an intern web developer at SMART TOUCH GROUP, a startup in the digital field, about seven month.
+                    
+                    During those two last month I worked as a part-time web developer at Knowledge For Africa, another growing startup that provide trainings.</p>
+                </div>
+              </div>
+            </div>
         </div>
       </main>
-    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
