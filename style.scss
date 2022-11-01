@@ -314,10 +314,9 @@ main {
 
     #wido {
       width: 75%;
-      font-size: 21px;
-      margin-top: 24px;
-      margin-bottom: 24px;
-      text-align: justify;
+      font-size: 18px;
+      margin-top: 18px;
+      margin-bottom: 18px;
     }
 
     #medias-icons {
@@ -367,13 +366,11 @@ main {
 #scroll-btn-container {
   width: 40px;
   height: fit-content;
-  margin: 30px auto;
+  margin: 24px auto;
 }
 
 #about {
   padding-top: 60px;
-  background: url(src/background.png) no-repeat;
-  background-position-x: left;
 
   h1 {
     width: fit-content;
@@ -389,13 +386,22 @@ main {
 .content {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
  }
 }
 
 #about-me {
-  width: calc(100% - 120px);
-  margin: auto;
+  background: url(src/background.png) no-repeat;
+  background-position: right;
+}
+
+#about-me, #tech {
+  width: 80%;
+  margin: 24px auto;
+
+  p:nth-of-type(2) {
+    margin: 16px auto;
+  }
 }
 
 #about-me .img-container {
@@ -416,9 +422,51 @@ main {
 
 #about .text {
   width: 50%;
-  font-size: 21px;
+  font-size: 17px;
   text-align: justify;
 }
+
+#tech h3 {
+  font-size: 32px;
+  text-align: center;
+}
+
+#tech .content {
+  width: 100%;
+  margin: 24px auto;
+  padding-top: 12px;
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 2;
+
+  div {
+    font-size: 70px;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  iconify-icon[icon="simple-icons:php"] {
+    color: #6181B6;
+  }
+  
+  iconify-icon[icon="bi:git"] {
+    color: #F34F29;
+  }
+
+  iconify-icon[icon*="logos:"]
+   {
+    font-size: 60px;
+  }
+
+  .tech-row-span-2 {
+    grid-row: span 2;
+  }
+}
+
 
 body[data-theme="light"] {
   color: $lightTextColor;
@@ -457,6 +505,8 @@ body[data-theme="light"] {
   .bg-anim-hide {
     animation: lsbgodown 0.15s ease-out 0.05s forwards;
   }
+
+  iconify-icon {background: $lightBgColor;}
 }
 
 #first-hexagone {
@@ -505,6 +555,10 @@ body[data-theme="dark"] {
   .bg-anim-hide {
     animation: dsbgodown 0.15s ease-out 0.05s forwards;
   }
+
+  #github-link {color: $darkTextColor !important;}
+
+  iconify-icon {background: $darkBgColor;}
 }
 
 @media (max-width: 1280px) {
@@ -536,7 +590,7 @@ body[data-theme="dark"] {
     }
   }
 
-  #about-me {width: 100%;}
+  #about-me, #tech {width: 100%;}
 
   #about-me .text {font-size: 18px;}
 }
@@ -552,12 +606,25 @@ body[data-theme="dark"] {
     h1 {
       font-size: 45px !important;
     }
+
+    #tech h3 {font-size: 28px;}
   }
 
   #about-me {
-    .text {font-size: 17px;}
+    width: 100%;
+    .text {font-size: 16px;}
     .img-container img {
-      width: 300px;
+      width: 250px;
+    }
+  }
+
+  #tech .content {
+    grid-template-columns: repeat(7, 1fr);
+
+    div {padding: 20px 10px;}
+
+    .tech-row-span-2 {
+      grid-row: span 1;
     }
   }
 }
@@ -623,8 +690,17 @@ body[data-theme="dark"] {
       .text {
         width: calc(100% - 100px);
         margin-top: 25px;
+        font-size: 16px;
       }
     }
+  }
+
+  #tech .content {
+    iconify-icon {font-size: 60px;}
+  iconify-icon[icon*="logos:"]
+  {
+   font-size: 50px;
+ }
   }
 }
 
@@ -678,7 +754,7 @@ body[data-theme="dark"] {
       width: fit-content !important;
     }
     #wido {
-      font-size: 17px !important;
+      font-size: 16px !important;
     }
 
     .media-svg {
@@ -696,11 +772,21 @@ body[data-theme="dark"] {
       width: calc(100% - 10px) !important;
     }
   }
+
+  #tech h3 {font-size: 24px;}
+  
+  #tech .content {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 340px) {
   #hero-section section {
     width: 100% !important;
+  }
+
+  #tech .content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

@@ -1,3 +1,4 @@
+import 'iconify-icon';
 import "./style.scss";
 
 const sidebar = document.getElementById("mobile-sidebar");
