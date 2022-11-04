@@ -36,6 +36,7 @@ $defaultMainPt: 16px;
 body {
   min-width: 320px;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 #app {
@@ -328,8 +329,7 @@ main {
         padding: 5px;
 
         .media-svg {
-          width: 32px;
-          height: 32px;
+          font-size: 36px;
         }
       }
 
@@ -395,7 +395,7 @@ main {
   background-position: right;
 }
 
-#about-me, #tech {
+#about-me, #tech, #tools {
   width: 80%;
   margin: 24px auto;
 
@@ -426,7 +426,7 @@ main {
   text-align: justify;
 }
 
-#tech h3 {
+#tech h3, #tools h3 {
   font-size: 32px;
   text-align: center;
 }
@@ -464,6 +464,59 @@ main {
 
   .tech-row-span-2 {
     grid-row: span 2;
+  }
+}
+
+#tools .content {
+  width: 50%;
+  margin: 32px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  div {
+    width: fit-content;
+    height: 170px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hexagon {
+      width: 175px;
+      height: 175px;
+      stroke-width: 20px !important;
+    }
+
+    image {
+      width: 100px;
+      height: 100px;
+      background-color: #0073b1 !important;
+    }
+  }
+
+  div:nth-child(1) {
+    svg {stroke: #2489CA;}
+  }
+  
+  div:nth-child(2) {
+    svg {stroke: #000;}
+  }
+  
+  div:nth-child(3) {
+    svg {stroke: #FCD209;}
+  }
+
+  div:nth-child(4) {
+    svg {stroke: #9013FE;}
+  }
+  
+  div:nth-child(5) {
+    svg {stroke: #FF6C37;}
+  }
+  
+  div:nth-child(6) {
+    svg {stroke: #DF731B;}
   }
 }
 
@@ -505,8 +558,6 @@ body[data-theme="light"] {
   .bg-anim-hide {
     animation: lsbgodown 0.15s ease-out 0.05s forwards;
   }
-
-  iconify-icon {background: $lightBgColor;}
 }
 
 #first-hexagone {
@@ -557,8 +608,7 @@ body[data-theme="dark"] {
   }
 
   #github-link {color: $darkTextColor !important;}
-
-  iconify-icon {background: $darkBgColor;}
+  #tools  div:nth-child(2) svg {stroke: #eee !important;}
 }
 
 @media (max-width: 1280px) {
@@ -590,7 +640,7 @@ body[data-theme="dark"] {
     }
   }
 
-  #about-me, #tech {width: 100%;}
+  #about-me, #tech, #tools {width: 100%;}
 
   #about-me .text {font-size: 18px;}
 }
@@ -607,7 +657,7 @@ body[data-theme="dark"] {
       font-size: 45px !important;
     }
 
-    #tech h3 {font-size: 28px;}
+    #tech h3, #tools h3 {font-size: 28px;}
   }
 
   #about-me {
@@ -719,8 +769,7 @@ body[data-theme="dark"] {
   }
 
   #sun-svg {
-    width: 22px;
-    height: 22px;
+    font-size: 60px !important;
     margin-top: 1px;
   }
 
@@ -746,7 +795,7 @@ body[data-theme="dark"] {
       font-size: 34px !important;
     }
     h1 {
-      font-size: 45px !important;
+      font-size: 40px !important;
     }
     h1,
     h2,
@@ -754,12 +803,12 @@ body[data-theme="dark"] {
       width: fit-content !important;
     }
     #wido {
+      width: 100% !important;
       font-size: 16px !important;
     }
 
     .media-svg {
-      width: 28px !important;
-      height: 28px !important;
+      font-size: 30px !important;
     }
   }
 
@@ -773,7 +822,7 @@ body[data-theme="dark"] {
     }
   }
 
-  #tech h3 {font-size: 24px;}
+  #tech h3, #tools h3 {font-size: 24px;}
   
   #tech .content {
     grid-template-columns: repeat(4, 1fr);
