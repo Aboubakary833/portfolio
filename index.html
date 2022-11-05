@@ -5,11 +5,14 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="rgb(255, 251, 247)">
+  <meta name="description" content="I'm a self-taught web developer">
+  <meta name="apple-mobile-web-app-status-bar-style" content="rgb(255, 251, 247)">
   <link rel="stylesheet" href="./style.scss">
   <title>Aboubakary Cissé</title>
 </head>
 
-<body data-theme="light">
+<body data-theme="dark">
   <header class="h-fit">
     <div class="container" id="header-container">
       <div id="sidebar-show-btn">
@@ -136,7 +139,8 @@
               <pattern id="avatarPattern" patternContentUnits="objectBoundingBox" width="1" height="1">
                 <use xlink:href="#avatar" transform="translate(-0.12 0.007) scale(0.0014 0.00125)" />
               </pattern>
-              <image xlink:href="src/avatars/avatarOne.png" width="900" height="900" id="avatar" preserveAspectRatio />
+              <image xlink:href="src/images/avatars/avatarOne.png" width="900" height="900" id="avatar"
+                preserveAspectRatio />
             </defs>
           </svg>
         </section>
@@ -170,7 +174,7 @@
         <h2 class="subtitle">0.0 About me</h2>
         <div class="content d-flex justify-center">
           <div class="img-container">
-            <img src="src/avatars/avatarTwo.png" alt="Aboubakary Cissé">
+            <img src="src/images/avatars/avatarTwo.webp" alt="Aboubakary Cissé">
           </div>
           <div class="text">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ea, earum, error consequatur
@@ -243,43 +247,46 @@
           <div class="row">
             <div>
               <svg viewBox="0 0 210 190" fill="transparent" class="hexagon">
-                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75" transform="translate(90 -45) rotate(29)" />
-                <image xlink:href="src/icons/vscode.svg" x="50" y="50" />
+                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75"
+                  transform="translate(90 -45) rotate(29)" />
+                <image xlink:href="src/images/logos/vscode.svg" x="50" y="50" />
               </svg>
             </div>
             <div>
               <svg viewBox="0 0 210 190" fill="transparent" class="hexagon">
-                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75" transform="translate(90 -45) rotate(29)" />
-                <image xlink:href="src/icons/github.svg" x="52" y="48" />
+                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75"
+                  transform="translate(90 -45) rotate(29)" />
+                <image xlink:href="src/images/logos/github.svg" x="52" y="48" />
               </svg>
             </div>
             <div>
               <svg viewBox="0 0 210 190" fill="transparent" class="hexagon">
-                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75" transform="translate(90 -45) rotate(29)" />
-                <image xlink:href="src/icons/chrome.svg" stroke="#fff" x="52" y="47" />
+                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75"
+                  transform="translate(90 -45) rotate(29)" />
+                <image xlink:href="src/images/logos/chrome.svg" stroke="#fff" x="52" y="47" />
               </svg>
             </div>
           </div>
           <div class="row">
             <div>
               <svg viewBox="0 0 210 190" fill="transparent" class="hexagon">
-                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75" transform="translate(90 -45) rotate(29)"
-                  fill="url(#figmaPattern)" />
-                <image xlink:href="src/icons/figma.svg" x="57" y="50" />
+                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75"
+                  transform="translate(90 -45) rotate(29)" />
+                <image xlink:href="src/images/logos/figma.svg" x="57" y="50" />
               </svg>
             </div>
             <div>
               <svg viewBox="0 0 210 190" fill="transparent" class="hexagon">
-                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75" transform="translate(90 -45) rotate(29)"
-                  fill="url(#figmaPattern)" />
-                <image xlink:href="src/icons/postman.svg" x="51" y="50" />
+                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75"
+                  transform="translate(90 -45) rotate(29)" />
+                <image xlink:href="src/images/logos/postman.svg" x="51" y="50" />
               </svg>
             </div>
             <div>
               <svg viewBox="0 0 210 190" fill="transparent" class="hexagon">
-                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75" transform="translate(90 -45) rotate(29)"
-                  fill="url(#figmaPattern)" />
-                <image xlink:href="src/icons/firefox.svg" x="53" y="50" />
+                <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75"
+                  transform="translate(90 -45) rotate(29)" />
+                <image xlink:href="src/images/logos/firefox.svg" x="53" y="50" />
               </svg>
             </div>
           </div>
@@ -290,7 +297,62 @@
         <h3>Entreprises I have worked for</h3>
         <div class="content">
           <div class="row">
-            
+            <div>
+              <div class="company-logo">
+                <img src="src/images/entreprises/smtgroup-logo.png" alt="Smart Touch Group">
+                <h2>Smart Touch Group</h2>
+              </div>
+              <div class="desc">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet optio repellendus quidem sed animi culpa ea necessitatibus deleniti, delectus eum et reiciendis quam. Facilis, consequatur minima quos asperiores temporibus odit.
+                Error deserunt a illo, sit qui consectetur earum et corrupti obcaecati eveniet laudantium repellat nobis voluptatem corporis rem laborum iure fugiat! Dolor quisquam facilis eum illum esse? Quia, ipsa repellendus?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <div class="company-logo">
+                <img src="src/images/entreprises/k4a-logo.png" alt="Knowledge For Africa">
+                <h2>Knowledge For Africa</h2>
+              </div>
+              <div class="desc">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet optio repellendus quidem sed animi culpa ea necessitatibus deleniti, delectus eum et reiciendis quam. Facilis, consequatur minima quos asperiores temporibus odit.
+                Error deserunt a illo, sit qui consectetur earum et corrupti obcaecati eveniet laudantium repellat nobis voluptatem corporis rem laborum iure fugiat! Dolor quisquam facilis eum illum esse? Quia, ipsa repellendus?</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <div class="company-logo">
+                <img src="src/images/entreprises/horinfo-logo.png" alt="Horinfo">
+                <h2>Horinfo Burkina Faso</h2>
+              </div>
+              <div class="desc">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet optio repellendus quidem sed animi culpa ea necessitatibus deleniti, delectus eum et reiciendis quam. Facilis, consequatur minima quos asperiores temporibus odit.
+                Error deserunt a illo, sit qui consectetur earum et corrupti obcaecati eveniet laudantium repellat nobis voluptatem corporis rem laborum iure fugiat! Dolor quisquam facilis eum illum esse? Quia, ipsa repellendus?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END OF ABOUT -->
+
+    <div id="projects" class="container">
+      <h1 class="title">2. Projects</h1>
+      <h3 class="subtitle">Some of my personal projects</h3>
+      <div class="content">
+        <div class="card">
+          <div class="card-header">
+            <iconify-icon icon="bi:folder"></iconify-icon>
+            <iconify-icon icon="bxl:github"></iconify-icon>
+          </div>
+          <div class="card-body">
+
+          </div>
+          <div class="card-footer">
+
           </div>
         </div>
       </div>

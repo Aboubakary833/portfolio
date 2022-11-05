@@ -370,7 +370,7 @@ main {
   margin: 24px auto;
 }
 
-#about {
+#about , #projects {
   padding-top: 60px;
 
   h1 {
@@ -392,7 +392,7 @@ main {
 }
 
 #about-me {
-  background: url(src/backgrounds/background.png) no-repeat;
+  background: url(src/images/backgrounds/background.png) no-repeat;
   background-position: right;
   background-position-y: center;
 
@@ -437,7 +437,8 @@ main {
 
 #tech h3,
 #tools h3, 
-#experience h3 {
+#experience h3,
+#projects h3 {
   font-size: 32px;
   text-align: center;
 }
@@ -554,8 +555,80 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  .row {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    .desc {
+      width: 50%;
+      padding-top: 10px;
+      padding-left: 4.7rem;
+    }
+  }
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    border: 5px solid rgba(255, 136, 0, 0.603);
+    border-radius: 3rem;
+    box-shadow: 0 0 0 3px $primary;
+  }
+
+  h2 {
+    font-size: 32px;
+    color: rgba(255, 136, 0, 0.75);
+    margin-left: 10px;
+  }
+}
+
+#experience .content .row::before {
+  content: '';
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 136, 0, 0.75), rgba(255, 136, 0, 0.25));
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  z-index: -1;
+}
+
+#projects .content {
+  width: 80%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 15px;
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  iconify-icon {
+    font-size: 32px !important;
+  }
 }
 
 body[data-theme="light"] {
@@ -594,6 +667,18 @@ body[data-theme="light"] {
 
   .bg-anim-hide {
     animation: lsbgodown 0.15s ease-out 0.05s forwards;
+  }
+
+  .company-logo img {
+    background: $lightBgColor;
+  }
+
+  #projects h3 {
+    color: #080808;
+  }
+
+  .card {
+    box-shadow: 1px 1px 24px #ddd;
   }
 }
 
@@ -650,6 +735,18 @@ body[data-theme="dark"] {
   #tools div:nth-child(2) svg {
     stroke: #eee !important;
   }
+  .company-logo img {
+    background: $darkBgColor;
+  }
+
+  #projects h3 {
+    color: #eee;
+  }
+
+  .card {
+    box-shadow: 1px 1px 24px #333333;
+  }
+
 }
 
 @media (max-width: 1280px) {
@@ -690,6 +787,8 @@ body[data-theme="dark"] {
   #about-me .text {
     font-size: 18px;
   }
+
+  .row .desc {width: 75% !important;}
 }
 
 @media (max-width: 992px) {
@@ -816,6 +915,16 @@ body[data-theme="dark"] {
     width: 150px !important;
     height: 150px !important;
   }
+
+
+  #experience .content .row .desc {
+    width: 80% !important;
+  }
+
+  .company-logo img {
+    width: 45px !important;
+    height: 45px !important;
+  }
 }
 
 @media (max-width: 640px) {
@@ -886,8 +995,11 @@ body[data-theme="dark"] {
     }
   }
 
+  .subtitle {font-size: 36px !important;}
+
   #tech h3,
-  #tools h3 {
+  #tools h3,
+  #experience h3 {
     font-size: 24px;
   }
 
@@ -899,6 +1011,26 @@ body[data-theme="dark"] {
     width: 100px !important;
     height: 100px !important;
   }
+
+
+  #experience .content .row .desc {
+    width: 100% !important;
+    margin-top: 10px;
+    margin-left: 10px !important;
+    padding: 0 !important;
+  }
+
+  .company-logo {
+    width: 100% !important;
+    img {
+      width: 38px !important;
+      height: 38px !important;
+    }
+
+    h2 {font-size: 24px !important;}
+  }
+
+  #experience .content .row::before {display: none;}
 }
 
 @media (max-width: 340px) {
