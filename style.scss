@@ -139,6 +139,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 main {
@@ -383,19 +384,27 @@ main {
     margin-bottom: 30px;
   }
 
-.content {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
- }
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 #about-me {
-  background: url(src/background.png) no-repeat;
+  background: url(src/backgrounds/background.png) no-repeat;
   background-position: right;
+  background-position-y: center;
+
+  .text {
+    backdrop-filter: blur(5px);
+  }
 }
 
-#about-me, #tech, #tools {
+#about-me,
+#tech,
+#tools,
+#experience {
   width: 80%;
   margin: 24px auto;
 
@@ -426,7 +435,9 @@ main {
   text-align: justify;
 }
 
-#tech h3, #tools h3 {
+#tech h3,
+#tools h3, 
+#experience h3 {
   font-size: 32px;
   text-align: center;
 }
@@ -446,19 +457,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
   }
 
   iconify-icon[icon="simple-icons:php"] {
-    color: #6181B6;
-  }
-  
-  iconify-icon[icon="bi:git"] {
-    color: #F34F29;
+    color: #6181b6;
   }
 
-  iconify-icon[icon*="logos:"]
-   {
+  iconify-icon[icon="bi:git"] {
+    color: #f34f29;
+  }
+
+  iconify-icon[icon*="logos:"] {
     font-size: 60px;
   }
 
@@ -468,58 +477,86 @@ main {
 }
 
 #tools .content {
-  width: 50%;
-  margin: 32px auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  width: fit-content;
+  margin: 50px auto;
+  display: block;
 
-  div {
-    width: fit-content;
-    height: 170px;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .row {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-    .hexagon {
-      width: 175px;
-      height: 175px;
-      stroke-width: 20px !important;
+    div {
+      width: fit-content;
+      height: fit-content;
+      font-size: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hexagon {
+        width: 175px;
+        height: 175px;
+        stroke-width: 20px !important;
+      }
+
+      image {
+        width: 100px;
+        height: 100px;
+        background-color: #0073b1 !important;
+      }
     }
+  }
 
-    image {
-      width: 100px;
-      height: 100px;
-      background-color: #0073b1 !important;
+  .row:first-of-type {
+    div:nth-child(1) {
+      svg {
+        stroke: #2489ca;
+      }
+    }
+  
+    div:nth-child(2) {
+      svg {
+        stroke: #000;
+      }
+    }
+  
+    div:nth-child(3) {
+      svg {
+        stroke: #fcd209;
+      }
     }
   }
 
-  div:nth-child(1) {
-    svg {stroke: #2489CA;}
-  }
+  .row:last-of-type {
+    
+    div:nth-child(1) {
+      svg {
+        stroke: #9013fe !important;
+      }
+    }
   
-  div:nth-child(2) {
-    svg {stroke: #000;}
-  }
+    div:nth-child(2) {
+      svg {
+        stroke: #ff6c37 !important;
+      }
+    }
   
-  div:nth-child(3) {
-    svg {stroke: #FCD209;}
-  }
-
-  div:nth-child(4) {
-    svg {stroke: #9013FE;}
-  }
-  
-  div:nth-child(5) {
-    svg {stroke: #FF6C37;}
-  }
-  
-  div:nth-child(6) {
-    svg {stroke: #DF731B;}
+    div:nth-child(3) {
+      svg {
+        stroke: #df731b !important;
+      }
+    }
   }
 }
 
+#experience .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
 body[data-theme="light"] {
   color: $lightTextColor;
@@ -607,8 +644,12 @@ body[data-theme="dark"] {
     animation: dsbgodown 0.15s ease-out 0.05s forwards;
   }
 
-  #github-link {color: $darkTextColor !important;}
-  #tools  div:nth-child(2) svg {stroke: #eee !important;}
+  #github-link {
+    color: $darkTextColor !important;
+  }
+  #tools div:nth-child(2) svg {
+    stroke: #eee !important;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -640,9 +681,15 @@ body[data-theme="dark"] {
     }
   }
 
-  #about-me, #tech, #tools {width: 100%;}
+  #about-me,
+  #tech,
+  #tools {
+    width: 100%;
+  }
 
-  #about-me .text {font-size: 18px;}
+  #about-me .text {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -657,21 +704,32 @@ body[data-theme="dark"] {
       font-size: 45px !important;
     }
 
-    #tech h3, #tools h3 {font-size: 28px;}
+    #tech h3,
+    #tools h3 {
+      font-size: 28px;
+    }
   }
 
   #about-me {
     width: 100%;
-    .text {font-size: 16px;}
+    .text {
+      font-size: 16px;
+    }
     .img-container img {
       width: 250px;
+    }
+
+    #tools .content {
+      margin: 0px !important;
     }
   }
 
   #tech .content {
     grid-template-columns: repeat(7, 1fr);
 
-    div {padding: 20px 10px;}
+    div {
+      padding: 20px 10px;
+    }
 
     .tech-row-span-2 {
       grid-row: span 1;
@@ -746,11 +804,17 @@ body[data-theme="dark"] {
   }
 
   #tech .content {
-    iconify-icon {font-size: 60px;}
-  iconify-icon[icon*="logos:"]
-  {
-   font-size: 50px;
- }
+    iconify-icon {
+      font-size: 60px;
+    }
+    iconify-icon[icon*="logos:"] {
+      font-size: 50px;
+    }
+  }
+
+  #tools .content .hexagon {
+    width: 150px !important;
+    height: 150px !important;
   }
 }
 
@@ -822,10 +886,18 @@ body[data-theme="dark"] {
     }
   }
 
-  #tech h3, #tools h3 {font-size: 24px;}
-  
+  #tech h3,
+  #tools h3 {
+    font-size: 24px;
+  }
+
   #tech .content {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  #tools .content .hexagon {
+    width: 100px !important;
+    height: 100px !important;
   }
 }
 
