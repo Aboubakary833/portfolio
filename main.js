@@ -9,6 +9,7 @@ const lightThemeToggleBtn = document.getElementById('toggle-to-light');
 const darkThemeToggleBtn = document.getElementById('toggle-to-dark');
 const toggleCircle = document.getElementById('toggle-circle');
 const storage = window.localStorage
+const {language} = window.navigator
 
 window.addEventListener('load', function() {
   if(storage.getItem('abc_theme')) {
@@ -18,6 +19,17 @@ window.addEventListener('load', function() {
     toggleCircle.setAttribute('class', "light-theme-toggle");
     storage.setItem('abc_theme', "light")
   }
+
+  if(language.includes('fr')) {
+    this.fetch('./fr.json')
+    .then(res => {
+      res.json()
+      .then(obj => {
+        handleTranslation(obj)
+      })
+    })
+  }
+
 });
 showBtn.addEventListener("click", showOrHide);
 hideBtn.addEventListener("click", showOrHide);
@@ -58,4 +70,14 @@ function changeTheme(theme) {
       toggleCircle.setAttribute('class', "light-theme-toggle");
       break;
   }
+}
+
+function handleTranslation(data) {
+  document
+  .querySelectorAll("[data-translate]")
+  .forEach(element => {
+    const key = element.getAttribute('data-translate')
+    const translation = data[key]
+    element.innerHTML = translation
+  })
 }
