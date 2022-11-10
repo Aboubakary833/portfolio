@@ -652,6 +652,10 @@ main {
 #projects .subtitle, #contact-me .subtitle, #resume .subtitle {text-shadow: none;}
 
 .card {
+  min-height: 284px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 15px;
   border-radius: 5px;
   border: 5px solid rgba($color: #f80, $alpha: .5);

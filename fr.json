@@ -13,10 +13,14 @@
     "second_par": "Après mon baccalauréat, j'ai décidé de poursuivre avec une formation en développement web à <a href='#'>SIMPLON.CO</a> durant laquelle j'ai eu à travailler sur de vrai projets en solo et en groupe. À la fin de la formation j'ai eu à travailler pendant six mois en tant que stagiaire à <a href='#'>Smart Touch Group</a>.",
     "last_par": "Après mon stage, j'ai travailler durant quelques mois pour une petite entreprise. Actuellement je suis en fin de contrat à HORINFO Burkina et je suis à la recherche de nouvelles opportunités de travail en boîte, à distance ou en tant que freelance.",
     "tech_title": "Technologie",
-    "tech_subtitle": "Quelques uns des technologies que j'utilise",
+    "tech_subtitle": "Quelques unes des technologies que j'utilise",
     "tools_title": "Mes outils de travail",
     "tools_subtitle": "Quelques outils avec lesquels je travaille",
-    "experienc_title": "Mes expériences",
-    "experienc_subtitle": "Les entreprises pour lesquelles j'ai travaillé",
-    "": ""
+    "experience_title": "Mes expériences",
+    "experience_subtitle": "Les entreprises pour lesquelles j'ai eu travailler",
+    "smtg": "Durant mon stage à <strong>Smart Touch Group</strong>, j'ai pris part dans la réalisation de certains site web pour des particuliers et aussi dans la conception d'une solution numérique de la boite. J'ai principalement travaillé avec le framework PHP <strong>Laravel</strong> et le JavaScript.",
+    "k4a": "<strong>Knowledge For Africa</strong> etait une petite entreprise pour laquelle j'ai eu travaillé après mon stage. J'y ai développé le site web de l'entreprise en question et celui d'un cabinet de consultation juridique. Le framework <strong>Laravel</strong> et le <strong>JavaScript</strong> sont les technologies avec lesquelles j'ai travaillé.",
+    "hrf": "<strong>Horinfo</strong> est une entreprise évoluant depuis plus de 20 ans dans la conception de solutions numérique. J'y ai contribué dans le développement d'une solution de gestion d'évènement. J'ai aussi eu à travailler sur un logiciel destiné à une structure étatique. <strong>ReactJS</strong>, le <strong>JavaScript</strong> et le framework <strong>Laravel</strong> sont les technologies que j'y ai eu à utiliser.",
+    "project_title": "Projets",
+    "project_subtitle": "Quelques projets personnels"
 }
