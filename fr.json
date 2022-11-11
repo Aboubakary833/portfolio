@@ -4,8 +4,8 @@
     "projects": "Mes projets",
     "resume": "Mon CV",
     "contact_me": "Me contacter",
-    "welcome": "Hey 👋🏽️, Bienvenue! Je suis",
-    "design_and_dev": "Designer et développer par",
+    "welcome": "Hey 👋🏽️, Bienvenue! <br/> Je suis",
+    "design_and_dev": "Designer et développer par <br />",
     "big_title_one": "Artisan du web",
     "big_title_two": "Je code pour le web",
     "wido_par": "Je suis spécialisé dans la conception de sites web modernes, d'applications web et d'APIs. Je fais aussi des designs Figma durant mes temps libres.",
@@ -21,6 +21,14 @@
     "smtg": "Durant mon stage à <strong>Smart Touch Group</strong>, j'ai pris part dans la réalisation de certains site web pour des particuliers et aussi dans la conception d'une solution numérique de la boite. J'ai principalement travaillé avec le framework PHP <strong>Laravel</strong> et le JavaScript.",
     "k4a": "<strong>Knowledge For Africa</strong> etait une petite entreprise pour laquelle j'ai eu travaillé après mon stage. J'y ai développé le site web de l'entreprise en question et celui d'un cabinet de consultation juridique. Le framework <strong>Laravel</strong> et le <strong>JavaScript</strong> sont les technologies avec lesquelles j'ai travaillé.",
     "hrf": "<strong>Horinfo</strong> est une entreprise évoluant depuis plus de 20 ans dans la conception de solutions numérique. J'y ai contribué dans le développement d'une solution de gestion d'évènement. J'ai aussi eu à travailler sur un logiciel destiné à une structure étatique. <strong>ReactJS</strong>, le <strong>JavaScript</strong> et le framework <strong>Laravel</strong> sont les technologies que j'y ai eu à utiliser.",
-    "project_title": "Projets",
-    "project_subtitle": "Quelques projets personnels"
+    "project_subtitle": "Quelques projets personnels",
+    "animes_tracker": "<strong>Anime Tracker</strong> un site web destiné au fanatiques des bandes dessiné permettant d'apprendre plus sur son animé favoris en lisant un synopsy ou en decouvrant le nombre de séries que comporte l'animé et plus. Je l'ai fais avec <strong>NextJS</strong>",
+    "az_legal": "<strong>AZ Legal</strong> est un site vitrine pour un cabinet de consultation juridique. Le site décrit l'entreprise et dispose d'un blog avec une section commentaire. Je l'ai conçu principalement avec <strong>Laravel</strong>",
+    "amine_burger": "<strong>Amine Burger</strong> est une application web de commande et de livraison de burger conçu avec <strong>ReactJS</strong> coté interface et communicant avec une API <strong>Laravel</strong>.",
+    "see_more": "Voir plus",
+    "resume_subtitle": "Voudrez-vous jeter un coup d'oeil sur mon CV? Cliquez sur le bouton en dessous pour le télécharger.",
+    "download_btn": "Télécharger le CV",
+    "contact_me_subtitle": "Vous êtes à la recherche d'un développeur pour compléter votre équipe ou un projet quelconque?",
+    "send_mail": "M'envoyer un mail",
+    "or_write_me_on": "Ou écrivez moi sur:"
 }
