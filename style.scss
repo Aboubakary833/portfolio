@@ -342,18 +342,9 @@ main {
         padding: 5px;
 
         .media-svg {
-          font-size: 36px;
+          font-size: 32px;
+          color: rgba($color: #f80, $alpha: .75);
         }
-      }
-
-      #github-link {
-        color: #000;
-      }
-      #linkedin-link {
-        color: #0073b1;
-      }
-      #twitter-link {
-        color: #1da1f2;
       }
     }
   }
@@ -813,6 +804,10 @@ body[data-theme="light"] {
   #projects h3, #contact-me h3, #resume h3 {
     color: #080808;
   }
+
+  #loader {
+    background: $lightBgColor;
+  }
 }
 
 #first-hexagone {
@@ -885,6 +880,10 @@ body[data-theme="dark"] {
 
   footer {
     background-color: rgba($color: #f80, $alpha: .75);
+  }
+
+  #loader {
+    background: $darkBgColor;
   }
 }
 
