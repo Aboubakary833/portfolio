@@ -9,10 +9,23 @@
   <meta name="description" content="I'm a self-taught web developer">
   <meta name="apple-mobile-web-app-status-bar-style" content="rgb(255, 251, 247)">
   <title>Aboubakary Cissé</title>
+  <style>
+    [data-loading="false"] {display: none;}
+    #loader {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body data-theme="light">
-  <header class="h-fit">
+  <div id="loader" style="display: none;">
+    <p>Text</p>
+  </div>
+  <header class="h-fit" data-loading="true">
     <div class="container" id="header-container">
       <div id="sidebar-show-btn">
         <button class="d-flex justify-center items-center">
@@ -95,7 +108,7 @@
       </div>
     </div>
   </header>
-  <main">
+  <main data-loading="true">
     <div id="heading" class="container">
 
       <!-- START-HERO-SECTION -->
@@ -248,7 +261,7 @@
               <svg viewBox="0 0 210 190" fill="transparent" class="hexagon">
                 <polygon points="80 30, 160 75, 160 165, 80 210, 0 165, 0 75"
                   transform="translate(90 -45) rotate(29)" />
-                <image xlink:href="src/images/logos/github.svg" x="52" y="48" />
+                <image xlink:href="src/images/logos/github-light.svg" x="52" y="48" id="github_logo" />
               </svg>
             </div>
             <div>
@@ -295,7 +308,7 @@
                 <h2>Smart Touch Group</h2>
               </div>
               <div class="desc">
-                <p>During my intership at <strong>Smart Touch Group</strong>, I took part in clients websites development and an intern solution. I have mainly worked with PHP <strong>Laravel</strong> framework and Vanilla JavaScript there.</p>
+                <p data-translate="smtg">During my intership at <strong>Smart Touch Group</strong>, I took part in clients websites development and an intern solution. I have mainly worked with PHP <strong>Laravel</strong> framework and Vanilla JavaScript there.</p>
               </div>
             </div>
           </div>
@@ -440,7 +453,7 @@
 
     </main>
 
-    <footer>
+    <footer data-loading="true">
       <p>Designed & Developed by <a href="#">Aboubakary Cissé</a></p>
     </footer>
 
