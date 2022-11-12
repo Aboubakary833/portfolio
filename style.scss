@@ -601,10 +601,18 @@ main {
     box-shadow: 0 0 0 3px $primary;
   }
 
-  h2 {
-    font-size: 32px;
-    color: rgba(255, 136, 0, 0.75);
-    margin-left: 10px;
+  div {
+    h2 {
+      font-size: 32px;
+      color: rgba(255, 136, 0, 0.75);
+      margin-left: 10px;
+    }
+  
+    p {
+      color: $primary;
+      font-weight: bold;
+      margin-left: 10px;
+    }
   }
 }
 
@@ -1170,11 +1178,14 @@ body[data-theme="dark"] {
     height: 100px !important;
   }
 
-  #experience .content .row .desc {
-    width: 100% !important;
-    margin-top: 10px;
-    margin-left: 10px !important;
-    padding: 0 !important;
+  #experience {
+    width: 100%;
+    .content .row .desc {
+      width: 100% !important;
+      margin-top: 10px;
+      margin-left: 10px !important;
+      padding: 0 !important;
+    }
   }
 
   .company-logo {
