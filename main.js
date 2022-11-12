@@ -8,6 +8,7 @@ const hideBtn = document.querySelector("#sidebar-hide-btn button");
 const lightThemeToggleBtn = document.getElementById('toggle-to-light');
 const darkThemeToggleBtn = document.getElementById('toggle-to-dark');
 const toggleCircle = document.getElementById('toggle-circle');
+const scrollBtn = document.getElementById('scroll-btn')
 const storage = window.localStorage
 const {language} = window.navigator
 
@@ -43,6 +44,14 @@ darkThemeToggleBtn.addEventListener('click', function() {
   if(storage.getItem('abc_theme') === "light") {
     changeTheme('dark')
   }
+})
+
+scrollBtn.addEventListener('click', function(e) {
+  e.preventDefault()
+  window.scrollTo({
+    top: window.innerHeight,
+    behavior: "smooth"
+  })
 })
 
 function showOrHide() {
