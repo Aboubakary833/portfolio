@@ -9,7 +9,7 @@ const lightThemeToggleBtn = document.getElementById("toggle-to-light");
 const darkThemeToggleBtn = document.getElementById("toggle-to-dark");
 const toggleCircle = document.getElementById("toggle-circle");
 const scrollBtn = document.getElementById("scroll-btn");
-const githubLogo = document.getElementById('github_logo')
+const githubLogo = document.getElementById("github_logo");
 const storage = window.localStorage;
 const { language } = window.navigator;
 
@@ -20,7 +20,8 @@ window.addEventListener("load", function () {
       "class",
       `${storage.getItem("abc_theme")}-theme-toggle`
     );
-    if(storage.getItem("abc_theme") === "dark")  githubLogo.setAttribute('xlink:href', "src/images/logos/github-dark.svg")
+    if (storage.getItem("abc_theme") === "dark")
+      githubLogo.setAttribute("xlink:href", "src/images/logos/github-dark.svg");
   } else {
     toggleCircle.setAttribute("class", "light-theme-toggle");
     storage.setItem("abc_theme", "light");
@@ -41,14 +42,14 @@ hideBtn.addEventListener("click", showOrHide);
 lightThemeToggleBtn.addEventListener("click", function () {
   if (storage.getItem("abc_theme") === "dark") {
     changeTheme("light");
-    githubLogo.setAttribute('xlink:href', "src/images/logos/github-light.svg")
+    githubLogo.setAttribute("xlink:href", "src/images/logos/github-light.svg");
   }
 });
 
 darkThemeToggleBtn.addEventListener("click", function () {
   if (storage.getItem("abc_theme") === "light") {
     changeTheme("dark");
-    githubLogo.setAttribute('xlink:href', "src/images/logos/github-dark.svg")
+    githubLogo.setAttribute("xlink:href", "src/images/logos/github-dark.svg");
   }
 });
 
