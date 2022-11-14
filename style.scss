@@ -91,7 +91,7 @@ button {
 .title,
 .subtitle {
   color: $primary;
-  text-shadow: -2px 1px 0 rgba($color: #f80, $alpha: .5);
+  text-shadow: -2px 1px 0 rgba($color: #f80, $alpha: 0.5);
 }
 
 .d-none {
@@ -217,11 +217,11 @@ main {
 }
 
 .dark-theme-toggle {
-  animation: switchToDark .5s ease 0s forwards;
+  animation: switchToDark 0.5s ease 0s forwards;
 }
 
 .light-theme-toggle {
-  animation: switchToLight .5s ease 0s forwards;
+  animation: switchToLight 0.5s ease 0s forwards;
 }
 
 #sun-svg {
@@ -319,7 +319,7 @@ main {
     h1 {
       font-size: 64px;
       color: $primary;
-      text-shadow: -2px 1px 0 rgba($color: #f80, $alpha: .5);
+      text-shadow: -2px 1px 0 rgba($color: #f80, $alpha: 0.5);
     }
 
     h1:first-of-type {
@@ -343,7 +343,7 @@ main {
 
         .media-svg {
           font-size: 32px;
-          color: rgba($color: #f80, $alpha: .75);
+          color: rgba($color: #f80, $alpha: 0.75);
         }
       }
     }
@@ -437,7 +437,7 @@ main {
       rgba(255, 136, 0, 0.25),
       $primary
     );
-    box-shadow: -5px 4px 0 rgba($color: #f80, $alpha: .5);
+    box-shadow: -5px 4px 0 rgba($color: #f80, $alpha: 0.5);
   }
 }
 
@@ -607,7 +607,7 @@ main {
       color: rgba(255, 136, 0, 0.75);
       margin-left: 10px;
     }
-  
+
     p {
       color: $primary;
       font-weight: bold;
@@ -649,7 +649,11 @@ main {
   gap: 2rem;
 }
 
-#projects .subtitle, #contact-me .subtitle, #resume .subtitle {text-shadow: none;}
+#projects .subtitle,
+#contact-me .subtitle,
+#resume .subtitle {
+  text-shadow: none;
+}
 
 .card {
   min-height: 284px;
@@ -658,9 +662,9 @@ main {
   justify-content: space-between;
   padding: 15px;
   border-radius: 5px;
-  border: 5px solid rgba($color: #f80, $alpha: .5);
+  border: 5px solid rgba($color: #f80, $alpha: 0.5);
   box-shadow: -5px 4px 0 $primary;
-  transition: box-shadow .4s;
+  transition: box-shadow 0.4s;
 }
 
 .card:hover {
@@ -697,7 +701,9 @@ main {
   }
 }
 
-.card-footer small {padding: 5px 10px;}
+.card-footer small {
+  padding: 5px 10px;
+}
 
 #see-more {
   margin-top: 30px;
@@ -705,18 +711,22 @@ main {
   text-align: center;
 }
 
-#see-more a, #get-in-touch a, #resume .content a {
+#see-more a,
+#get-in-touch a,
+#resume .content a {
   padding: 12px 38px;
-  background: rgba($color: #f80, $alpha: .5);
+  background: rgba($color: #f80, $alpha: 0.5);
   font-size: 18px;
   border-radius: 5px;
-  border-left: 1px solid rgba($color: #f80, $alpha: .85);
-  border-bottom: 1px solid rgba($color: #f80, $alpha: .85);
-  box-shadow: -4px 3px 0 rgba($color: #f80, $alpha: .75);
-  transition: all .4s;
+  border-left: 1px solid rgba($color: #f80, $alpha: 0.85);
+  border-bottom: 1px solid rgba($color: #f80, $alpha: 0.85);
+  box-shadow: -4px 3px 0 rgba($color: #f80, $alpha: 0.75);
+  transition: all 0.4s;
 }
 
-#see-more a:hover, #get-in-touch a:hover, #resume .content a:hover {
+#see-more a:hover,
+#get-in-touch a:hover,
+#resume .content a:hover {
   box-shadow: none;
   border-left: 1px solid transparent !important;
   border-bottom: 1px solid transparent !important;
@@ -726,7 +736,10 @@ main {
   .content {
     display: block;
 
-    #get-in-touch, #write-on-medias {text-align: center;}
+    #get-in-touch,
+    #write-on-medias {
+      text-align: center;
+    }
 
     #write-on-medias {
       .subtitle {
@@ -735,26 +748,29 @@ main {
 
       #write-on-medias-icons {
         font-size: 40px;
-        color: rgba($color: #f80, $alpha: .75);
+        color: rgba($color: #f80, $alpha: 0.75);
 
         iconify-icon {
           padding: 10px;
-        }        
+        }
       }
     }
   }
 }
 
-#contact-me .subtitle, #resume .subtitle {
+#contact-me .subtitle,
+#resume .subtitle {
   width: 60% !important;
   margin: 40px auto;
 }
 
-#get-in-touch a, #resume .content a {
+#get-in-touch a,
+#resume .content a {
   padding: 15px 40px;
 }
 
-#contact-me .content, #resume .content {
+#contact-me .content,
+#resume .content {
   padding-top: 40px !important;
   padding-bottom: 40px !important;
 }
@@ -764,7 +780,7 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  background-color: rgba($color: #f80, $alpha: .5);
+  background-color: rgba($color: #f80, $alpha: 0.5);
 }
 
 body[data-theme="light"] {
@@ -809,7 +825,9 @@ body[data-theme="light"] {
     background: $lightBgColor;
   }
 
-  #projects h3, #contact-me h3, #resume h3 {
+  #projects h3,
+  #contact-me h3,
+  #resume h3 {
     color: #080808;
   }
 
@@ -875,19 +893,23 @@ body[data-theme="dark"] {
     background: $darkBgColor;
   }
 
-  #projects h3, #contact-me h3, #resume h3 {
+  #projects h3,
+  #contact-me h3,
+  #resume h3 {
     color: #eee;
   }
-  
-  #see-more a, #get-in-touch a, #resume a {
-    background: rgba($color: #f80, $alpha: .75);
-    border-left: 1px solid rgba($color: #f80, $alpha: .65);
-    border-bottom: 1px solid rgba($color: #f80, $alpha: .65);
-    box-shadow: -4px 3px 0 rgba($color: #f80, $alpha: .5);
+
+  #see-more a,
+  #get-in-touch a,
+  #resume a {
+    background: rgba($color: #f80, $alpha: 0.75);
+    border-left: 1px solid rgba($color: #f80, $alpha: 0.65);
+    border-bottom: 1px solid rgba($color: #f80, $alpha: 0.65);
+    box-shadow: -4px 3px 0 rgba($color: #f80, $alpha: 0.5);
   }
 
   footer {
-    background-color: rgba($color: #f80, $alpha: .75);
+    background-color: rgba($color: #f80, $alpha: 0.75);
   }
 
   #loader {
@@ -1160,7 +1182,9 @@ body[data-theme="dark"] {
     font-size: 36px !important;
   }
 
-  .title {font-size: 40px !important;}
+  .title {
+    font-size: 40px !important;
+  }
 
   #tech h3,
   #tools h3,
@@ -1209,7 +1233,8 @@ body[data-theme="dark"] {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 
-  #contact-me .subtitle, #resume .subtitle {
+  #contact-me .subtitle,
+  #resume .subtitle {
     width: 100% !important;
   }
 }
