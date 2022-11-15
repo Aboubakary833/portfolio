@@ -245,7 +245,6 @@ main {
 #mobile-sidebar {
   width: 100%;
   height: 100vh;
-  filter: blur(0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -257,6 +256,7 @@ main {
   position: absolute;
   top: 0;
   left: -100%;
+  z-index: 1;
 }
 
 #mobile-sidebar-header {
