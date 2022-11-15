@@ -1158,7 +1158,7 @@ body[data-theme="dark"] {
       font-size: 34px !important;
     }
     h1 {
-      font-size: 40px !important;
+      font-size: 36px !important;
     }
     h1,
     h2,
@@ -1261,6 +1261,8 @@ body[data-theme="dark"] {
   }
 }
 
+.animated-text {animation: animatedText .5s ease 0s forwards;}
+.reverse-animated-text {animation: reverseAnimatedText .5s ease 0s forwards;}
 .loading-end {animation: loaderToTransparent 1.25s ease 0s forwards;}
 
 @keyframes fromLeft {
@@ -1343,5 +1345,29 @@ body[data-theme="dark"] {
   to {
     opacity: 0;
     backdrop-filter: 0px;
+  }
+}
+
+@keyframes animatedText {
+  from {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes reverseAnimatedText {
+  from {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
