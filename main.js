@@ -5,11 +5,13 @@ const sidebar = document.getElementById("mobile-sidebar");
 const sidebarContainer = document.getElementById("mobile-sidebar-container");
 const showBtn = document.querySelector("#sidebar-show-btn button");
 const hideBtn = document.querySelector("#sidebar-hide-btn button");
+const sidebarLinks = document.querySelectorAll('#sidebar-nav ul li a')
 const lightThemeToggleBtn = document.getElementById("toggle-to-light");
 const darkThemeToggleBtn = document.getElementById("toggle-to-dark");
 const toggleCircle = document.getElementById("toggle-circle");
 const scrollBtn = document.getElementById("scroll-btn");
 const githubLogo = document.getElementById("github_logo");
+const loader = document.getElementById('loader')
 const storage = window.localStorage;
 const { language } = window.navigator;
 
@@ -34,11 +36,15 @@ window.addEventListener("load", function () {
       });
     });
   }
-
-  // this.setTimeout(handleLoading, 1500)
+  handleLoading()
 });
+
 showBtn.addEventListener("click", showOrHide);
 hideBtn.addEventListener("click", showOrHide);
+sidebarLinks.forEach(link => {
+  link.addEventListener('click', showOrHide)
+})
+
 lightThemeToggleBtn.addEventListener("click", function () {
   if (storage.getItem("abc_theme") === "dark") {
     changeTheme("light");
@@ -97,9 +103,14 @@ function handleTranslation(data) {
 }
 
 function handleLoading() {
-  this.document
+  loader.setAttribute('class', 'loading-end')
+  loader.setAttribute('class', 'loading-end')
+  setTimeout(() => loader.style.display = "none", 1500)
+  setTimeout(() => {
+    document
     .querySelectorAll('[data-loading="true"]')
     .forEach((blockElement) => {
-      blockElement.dataset.loading = "false";
+      blockElement.setAttribute('data-loading', false)
     });
+  }, 1000)
 }

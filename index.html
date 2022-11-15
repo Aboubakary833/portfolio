@@ -10,23 +10,33 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="rgb(255, 251, 247)">
   <title>Aboubakary Cissé</title>
   <style>
-    [data-loading="false"] {
+    [data-loading="true"] {
       display: none;
     }
 
     #loader {
       width: 100%;
       height: 100vh;
+      background: transparent;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #loader svg {
+      width: 150px;
+      height: 150px;
+      stroke: #f80;
     }
   </style>
 </head>
 
 <body data-theme="light">
-  <div id="loader" style="display: none;">
-    <p>Text</p>
+  <div id="loader">
+    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_K6BvGT5Zx7.json"  background="transparent"  speed=".75"  style="width: 150px; height: 150px;" autoplay></lottie-player>
   </div>
   <header class="h-fit" data-loading="true">
     <div class="container" id="header-container">
@@ -45,16 +55,16 @@
         <nav id="header-nav">
           <ul class="d-inline-block">
             <li class="d-inline">
-              <a href="#" data-translate="about">About</a>
+              <a href="#about" data-translate="about">About</a>
             </li>
             <li class="d-inline">
-              <a href="#" data-translate="projects">Projects</a>
+              <a href="#projects" data-translate="projects">Projects</a>
             </li>
             <li class="d-inline">
-              <a href="#" data-translate="resume">Resume</a>
+              <a href="#resume" data-translate="resume">Resume</a>
             </li>
             <li class="d-inline">
-              <a href="#" data-translate="contact_me">Contact me</a>
+              <a href="#contact-me" data-translate="contact_me">Contact me</a>
             </li>
           </ul>
         </nav>
@@ -91,16 +101,16 @@
           <nav id="sidebar-nav">
             <ul>
               <li>
-                <a href="#" data-translate="about">About</a>
+                <a href="#about" data-translate="about">About</a>
               </li>
               <li>
-                <a href="#" data-translate="projects">Projects</a>
+                <a href="#projects" data-translate="projects">Projects</a>
               </li>
               <li>
-                <a href="#" data-translate="resume">Resume</a>
+                <a href="#resume" data-translate="resume">Resume</a>
               </li>
               <li>
-                <a href="#" data-translate="contact_me">Contact me</a>
+                <a href="#contact-me" data-translate="contact_me">Contact me</a>
               </li>
             </ul>
           </nav>
@@ -118,22 +128,22 @@
 
       <div id="hero-section">
         <section>
-          <h3 data-translate="welcome">Hey 👋🏽️, welcome! I'm</h3>
-          <h2>Aboubakary Cissé</h2>
-          <h1 data-translate="big_title_one">Web artisan</h1>
-          <h1 data-translate="big_title_two">I code for the web</h1>
+          <h3 data-translate="welcome" class="reverse-animated-text">Hey 👋🏽️, welcome! I'm</h3>
+          <h2 class="animated-text">Aboubakary Cissé</h2>
+          <h1 data-translate="big_title_one" class="animated-text">Web artisan</h1>
+          <h1 data-translate="big_title_two" class="reverse-animated-text">I code for the web</h1>
           <div id="wido">
             <p data-translate="wido_par">I'm specialized in building web APIs, modern websites and web application. I
               also design in figma at my spare time.</p>
           </div>
           <div id="medias-icons">
-            <a href="#" id="github-link">
+            <a href="https://github.com/Aboubakary833" id="github-link">
               <iconify-icon icon="akar-icons:github-fill" class="media-svg"></iconify-icon>
             </a>
-            <a href="#" id="linkedin-link">
+            <a href="https://www.linkedin.com/in/aboubakary-ciss%C3%A9-b768b81b4/" id="linkedin-link">
               <iconify-icon icon="akar-icons:linkedin-box-fill" class="media-svg"></iconify-icon>
             </a>
-            <a href="#" id="twitter-link">
+            <a href="https://twitter.com/Abubakr_Cisse" id="twitter-link">
               <iconify-icon icon="akar-icons:twitter-fill" class="media-svg"></iconify-icon>
             </a>
           </div>
@@ -200,7 +210,7 @@
               the career I wanted to pursue after my graduation. I then started writing some little programs in
               <strong>JavaScript</strong> and <strong>PHP</strong>.</p>
             <p data-translate="second_par">After my graduation, I decided to continue with a bootcamp in web development
-              at <a href="#">SIMPLON.CO</a> during which I built real projects with web technologies. At the end of that
+              at <a href="https://burkina-faso.simplon.co/" style="color: #f80; cursor: pointer;">SIMPLON.CO</a> during which I built real projects with web technologies. At the end of that
               bootcamp, I worked during six month as an intern web developer for a tech-company called <a href="#">Smart
                 Touch Group</a>.</p>
             <p data-translate="last_par">After my intership, I have worked for another little entreprise. Currently now
@@ -472,13 +482,13 @@
         <div id="write-on-medias">
           <h3 class="subtitle" data-translate="or_write_me_on">Or write me on:</h3>
           <div id="write-on-medias-icons">
-            <a href="#" id="telegram-link">
+            <a href="https://t.me/AbubakrSidick" id="telegram-link">
               <iconify-icon icon="akar-icons:telegram-fill" class="media-svg"></iconify-icon>
             </a>
-            <a href="#" id="linkedin-link">
+            <a href="https://www.linkedin.com/in/aboubakary-ciss%C3%A9-b768b81b4/" id="linkedin-link">
               <iconify-icon icon="akar-icons:linkedin-box-fill" class="media-svg"></iconify-icon>
             </a>
-            <a href="#" id="twitter-link">
+            <a href="https://twitter.com/Abubakr_Cisse" id="twitter-link">
               <iconify-icon icon="akar-icons:twitter-fill" class="media-svg"></iconify-icon>
             </a>
           </div>
@@ -494,6 +504,7 @@
     <p>Designed & Developed by <a href="#">Aboubakary Cissé</a></p>
   </footer>
 
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
 
