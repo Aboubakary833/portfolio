@@ -1,6 +1,7 @@
 import "iconify-icon";
 import darkGithub from "./images/logos/github-dark.svg"
 import lightGithub from "./images/logos/github-light.svg"
+import translations from './fr.json'
 
 const sidebar = document.getElementById("mobile-sidebar");
 const sidebarContainer = document.getElementById("mobile-sidebar-container");
@@ -31,11 +32,7 @@ window.addEventListener("load", function () {
   }
 
   if (language.includes("fr")) {
-    this.fetch("./fr.json").then((res) => {
-      res.json().then((obj) => {
-        handleTranslation(obj);
-      });
-    });
+    handleTranslation(translations);
   }
   handleLoading()
 });
