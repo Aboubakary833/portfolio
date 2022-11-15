@@ -471,15 +471,21 @@ main {
   padding-top: 12px;
   display: grid;
   gap: 0px;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: 2;
+  grid-template-columns: repeat(7, 1fr);
 
   div {
+    width: fit-content;
     font-size: 70px;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @for $i from 1 through 7 {
+    div:nth-of-type(#{$i}) {
+      height: 70px;
+    }
   }
 
   iconify-icon[icon="simple-icons:php"] {
@@ -493,11 +499,8 @@ main {
   iconify-icon[icon*="logos:"] {
     font-size: 60px;
   }
-
-  .tech-row-span-2 {
-    grid-row: span 2;
-  }
 }
+
 
 #tools .content {
   width: fit-content;
@@ -1008,10 +1011,6 @@ body[data-theme="dark"] {
     div {
       padding: 20px 10px;
     }
-
-    .tech-row-span-2 {
-      grid-row: span 1;
-    }
   }
 
   #projects .content {
@@ -1069,6 +1068,10 @@ body[data-theme="dark"] {
 
     section:last-of-type {
       display: none !important;
+    }
+
+    #tech .content {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 
@@ -1158,7 +1161,7 @@ body[data-theme="dark"] {
       font-size: 34px !important;
     }
     h1 {
-      font-size: 36px !important;
+      font-size: 42px !important;
     }
     h1,
     h2,
@@ -1261,8 +1264,6 @@ body[data-theme="dark"] {
   }
 }
 
-.animated-text {animation: animatedText .5s ease 0s forwards;}
-.reverse-animated-text {animation: reverseAnimatedText .5s ease 0s forwards;}
 .loading-end {animation: loaderToTransparent 1.25s ease 0s forwards;}
 
 @keyframes fromLeft {
@@ -1345,29 +1346,5 @@ body[data-theme="dark"] {
   to {
     opacity: 0;
     backdrop-filter: 0px;
-  }
-}
-
-@keyframes animatedText {
-  from {
-    transform: translateY(10px);
-    opacity: 0.5;
-  }
-
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes reverseAnimatedText {
-  from {
-    transform: translateY(-10px);
-    opacity: 0.5;
-  }
-
-  to {
-    transform: translateY(0px);
-    opacity: 1;
   }
 }
