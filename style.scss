@@ -24,6 +24,7 @@ $defaultMainPt: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -38,6 +39,13 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
 }
+
+body::-webkit-scrollbar {
+  appearance: none;
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {background: rgba($color: #f80, $alpha: 0.25);}
 
 #app {
   width: 100vw;
@@ -1253,6 +1261,8 @@ body[data-theme="dark"] {
   }
 }
 
+.loading-end {animation: loaderToTransparent 1.25s ease 0s forwards;}
+
 @keyframes fromLeft {
   from {
     left: -100%;
@@ -1322,5 +1332,16 @@ body[data-theme="dark"] {
   }
   to {
     left: 2px;
+  }
+}
+
+@keyframes loaderToTransparent {
+  from {
+    opacity: 1;
+    backdrop-filter: 10px;
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: 0px;
   }
 }
