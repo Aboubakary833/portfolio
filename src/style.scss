@@ -467,19 +467,27 @@ main {
 
 #tech .content {
   width: 100%;
-  margin: 24px auto;
+  height: 300px;
+  margin-top: 24px;
   padding-top: 12px;
   display: grid;
   gap: 0px;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 2;
 
   div {
+    width: fit-content;
     font-size: 70px;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @for $i from 1 through 7 {
+    div:nth-of-type(#{$i}) {
+      height: 70px;
+    }
   }
 
   iconify-icon[icon="simple-icons:php"] {
@@ -493,11 +501,8 @@ main {
   iconify-icon[icon*="logos:"] {
     font-size: 60px;
   }
-
-  .tech-row-span-2 {
-    grid-row: span 2;
-  }
 }
+
 
 #tools .content {
   width: fit-content;
@@ -1008,10 +1013,6 @@ body[data-theme="dark"] {
     div {
       padding: 20px 10px;
     }
-
-    .tech-row-span-2 {
-      grid-row: span 1;
-    }
   }
 
   #projects .content {
@@ -1069,6 +1070,10 @@ body[data-theme="dark"] {
 
     section:last-of-type {
       display: none !important;
+    }
+
+    #tech .content {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 
@@ -1158,7 +1163,7 @@ body[data-theme="dark"] {
       font-size: 34px !important;
     }
     h1 {
-      font-size: 36px !important;
+      font-size: 42px !important;
     }
     h1,
     h2,

@@ -1,4 +1,6 @@
 import "iconify-icon";
+import darkGithub from "./images/logos/github-dark.svg"
+import lightGithub from "./images/logos/github-light.svg"
 
 const sidebar = document.getElementById("mobile-sidebar");
 const sidebarContainer = document.getElementById("mobile-sidebar-container");
@@ -22,7 +24,7 @@ window.addEventListener("load", function () {
       `${storage.getItem("abc_theme")}-theme-toggle`
     );
     if (storage.getItem("abc_theme") === "dark")
-      githubLogo.setAttribute("xlink:href", "src/images/logos/github-dark.svg");
+      githubLogo.setAttribute("xlink:href", darkGithub);
   } else {
     toggleCircle.setAttribute("class", "light-theme-toggle");
     storage.setItem("abc_theme", "light");
@@ -47,14 +49,14 @@ sidebarLinks.forEach(link => {
 lightThemeToggleBtn.addEventListener("click", function () {
   if (storage.getItem("abc_theme") === "dark") {
     changeTheme("light");
-    githubLogo.setAttribute("xlink:href", "src/images/logos/github-light.svg");
+    githubLogo.setAttribute("xlink:href", lightGithub);
   }
 });
 
 darkThemeToggleBtn.addEventListener("click", function () {
   if (storage.getItem("abc_theme") === "light") {
     changeTheme("dark");
-    githubLogo.setAttribute("xlink:href", "src/images/logos/github-dark.svg");
+    githubLogo.setAttribute("xlink:href", darkGithub);
   }
 });
 
