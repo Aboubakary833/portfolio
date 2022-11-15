@@ -467,13 +467,11 @@ main {
 
 #tech .content {
   width: 100%;
-  height: 300px;
-  margin-top: 24px;
+  margin: 24px auto;
   padding-top: 12px;
   display: grid;
   gap: 0px;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 2;
 
   div {
     width: fit-content;
@@ -1266,8 +1264,6 @@ body[data-theme="dark"] {
   }
 }
 
-.animated-text {animation: animatedText .5s ease 0s forwards;}
-.reverse-animated-text {animation: reverseAnimatedText .5s ease 0s forwards;}
 .loading-end {animation: loaderToTransparent 1.25s ease 0s forwards;}
 
 @keyframes fromLeft {
@@ -1350,29 +1346,5 @@ body[data-theme="dark"] {
   to {
     opacity: 0;
     backdrop-filter: 0px;
-  }
-}
-
-@keyframes animatedText {
-  from {
-    transform: translateY(10px);
-    opacity: 0.5;
-  }
-
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes reverseAnimatedText {
-  from {
-    transform: translateY(-10px);
-    opacity: 0.5;
-  }
-
-  to {
-    transform: translateY(0px);
-    opacity: 1;
   }
 }
