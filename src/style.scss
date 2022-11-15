@@ -9,7 +9,7 @@ $defaultMainPt: 16px;
 
 @font-face {
   font-family: Fredoka;
-  src: url(public/Fredoka.ttf);
+  src: url(../public/Fredoka.ttf);
 }
 
 :root {
@@ -406,7 +406,7 @@ main {
 }
 
 #about-me {
-  background: url(src/images/backgrounds/background.png) no-repeat;
+  background: url(images/backgrounds/background.png) no-repeat;
   background-position: right;
   background-position-y: center;
 
