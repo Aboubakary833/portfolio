@@ -2,6 +2,7 @@ import "iconify-icon";
 import darkGithub from "./images/logos/github-dark.svg"
 import lightGithub from "./images/logos/github-light.svg"
 import translations from './fr.json'
+import Avatar from './images/avatars/avatarOne.png'
 
 const sidebar = document.getElementById("mobile-sidebar");
 const sidebarContainer = document.getElementById("mobile-sidebar-container");
@@ -14,6 +15,7 @@ const toggleCircle = document.getElementById("toggle-circle");
 const scrollBtn = document.getElementById("scroll-btn");
 const githubLogo = document.getElementById("github_logo");
 const loader = document.getElementById('loader')
+const secondAvatar = document.getElementById('secondAvatar')
 const storage = window.localStorage;
 const { language } = window.navigator;
 
@@ -34,8 +36,13 @@ window.addEventListener("load", function () {
   if (language.includes("fr")) {
     handleTranslation(translations);
   }
+
+  checkWindowWidth()
+  
   handleLoading()
 });
+
+window.addEventListener('resize', checkWindowWidth)
 
 showBtn.addEventListener("click", showOrHide);
 hideBtn.addEventListener("click", showOrHide);
@@ -111,4 +118,10 @@ function handleLoading() {
       blockElement.setAttribute('data-loading', false)
     });
   }, 1000)
+}
+
+function checkWindowWidth() {
+  if(window.innerWidth <= 640) {
+    secondAvatar.src = Avatar
+  }
 }
