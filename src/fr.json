@@ -26,7 +26,7 @@
     "hrf_from_to": "(10 MAI 2022 - 30 NOVEMBRE 2022)",
     "project_subtitle": "Quelques projets personnels",
     "animes_tracker": "<strong>Anime Tracker</strong> un site web destiné au fanatiques des bandes dessiné permettant d'apprendre plus sur son animé favoris en lisant un synopsy ou en decouvrant le nombre de séries que comporte l'animé et plus. Je l'ai fais avec <strong>NextJS</strong>",
-    "az_legal": "<strong>AZ Legal</strong> est un site vitrine pour un cabinet de consultation juridique. Le site décrit l'entreprise et dispose d'un blog avec une section commentaire. Je l'ai conçu principalement avec <strong>Laravel</strong>",
+    "clean_city": "<strong>Clean City</strong> un site pour une entreprise évoluant dans le nettoyage et le ramassage de dechets. Le site comporte une page pour les dévis et une section marketplace qui propose des articles aux clients. Le site est toujours en cours de réalisation.",
     "amine_burger": "<strong>Amine Burger</strong> est une application web de commande et de livraison de burger conçu avec <strong>ReactJS</strong> coté interface et communicant avec une API <strong>Laravel</strong>.",
     "see_more": "Voir plus",
     "resume_subtitle": "Voudrez-vous jeter un coup d'oeil sur mon CV? Cliquez sur le bouton en dessous pour le télécharger.",
