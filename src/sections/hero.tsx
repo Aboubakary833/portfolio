@@ -48,7 +48,7 @@ export function Description() {
 
 	return (
 		<div className="w-full inline-flex justify-center items-center xs:p-2 xs:justify-start">
-			<div className="flex items-center space-x-2">
+			<div className="mx-auto flex items-center space-x-2 w-45 xs:w-full">
 				<div>Software</div>
 				<ClientOnly>
 					<TextTransition springConfig={presets.wobbly}>

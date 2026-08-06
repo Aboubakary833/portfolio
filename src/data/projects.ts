@@ -25,7 +25,7 @@ export const projects = [
 		id: "codexa",
 		title: "Codexa",
 		description:
-			"A terminal-first code snippet manager built with Go, featuring a modern TUI, local storage, and a remote registry.",
+			"A terminal-based application designed to help developers quickly access concise, practical code snippets and common development patterns, without the verbosity of traditional documentation.",
 		tags: [
 			"Go",
 			"Bubbletea",
@@ -43,7 +43,7 @@ export const projects = [
 		id: "comu",
 		title: "Comu",
 		description:
-			"A modular monolith backend designed with Hexagonal Architecture and Domain-Driven Design principles, providing scalable APIs for authentication, users, posts, notifications, and more.",
+			"A modular monolith backend designed with Hexagonal Architecture and Domain-Driven Design principles, providing scalable APIs for authentication, users, posts and notifications.",
 		tags: [
 			"Go",
 			"Echo",
@@ -52,6 +52,7 @@ export const projects = [
 			"Docker",
 			"REST API",
 			"Clean architecture",
+			"Learning project",
 		],
 		externalUrls: {
 			github: toGithubUrl("comu"),
