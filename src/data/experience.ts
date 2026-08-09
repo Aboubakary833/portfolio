@@ -84,7 +84,7 @@ export const experiences = [
 
 		company: {
 			name: "Horinfo",
-			website: "#",
+			website: "https://horinfo.com/",
 			logo: "/companies/horinfo.png",
 		},
 
@@ -127,7 +127,7 @@ export const experiences = [
 
 		company: {
 			name: "Smart Touch Group",
-			website: "#",
+			website: "https://smartouchgroup.com/",
 			logo: "/companies/smtgroup.png",
 		},
 

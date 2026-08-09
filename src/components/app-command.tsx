@@ -168,7 +168,7 @@ function AppCommandGroup({
 	onSelect,
 }: AppCommandGroupProps) {
 	return (
-		<CommandGroup title={title}>
+		<CommandGroup heading={title}>
 			{items.map((item) => (
 				<AppCommandItem
 					title={item.title}
