@@ -6,7 +6,7 @@ import Button from "./ui/button";
 export default function NotFound() {
 	return (
 		<main className="px-2">
-			<div className="min-h-[calc(100dvh-300px)] border-x border-x-border">
+			<div className="min-h-[calc(100dvh-350px)] border-x border-x-border">
 				<div className="flex flex-col space-y-2 text-center">
 					<div className="h-fit text-primary dark:text-soft">
 						<Illustration className="mx-auto p-0 size-60 xs:size-70 sm:size-80" />
